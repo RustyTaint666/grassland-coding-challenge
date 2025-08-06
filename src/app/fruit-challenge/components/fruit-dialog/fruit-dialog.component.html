@@ -1,0 +1,52 @@
+<h2 mat-dialog-title class="dialog-header">
+    {{ data.name }} Details
+</h2>
+
+<mat-dialog-content class="dialog-content">
+    <div class="fruit-info-grid">
+        <div class="info-item">
+            <span class="label">ID:</span>
+            <span class="value">{{ data.id }}</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Genus:</span>
+            <span class="value">{{ data.genus }}</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Family:</span>
+            <span class="value">{{ data.family }}</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Order:</span>
+            <span class="value">{{ data.order }}</span>
+        </div>
+    </div>
+
+    <h3 class="nutrition-header">Nutritional Information:</h3>
+    <div class="nutrition-grid">
+        <div class="nutrition-item">
+            <span class="label">Carbohydrates:</span>
+            <span class="value">{{ data.nutritions.carbohydrates }}g</span>
+        </div>
+        <div class="nutrition-item">
+            <span class="label">Protein:</span>
+            <span class="value">{{ data.nutritions.protein }}g</span>
+        </div>
+        <div class="nutrition-item">
+            <span class="label">Fat:</span>
+            <span class="value">{{ data.nutritions.fat }}g</span>
+        </div>
+        <div class="nutrition-item">
+            <span class="label">Calories:</span>
+            <span class="value">{{ data.nutritions.calories }}kcal</span>
+        </div>
+        <div class="nutrition-item">
+            <span class="label">Sugar:</span>
+            <span class="value">{{ data.nutritions.sugar }}g</span>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" (click)="onCloseClick()">Close</button>
+</mat-dialog-actions>

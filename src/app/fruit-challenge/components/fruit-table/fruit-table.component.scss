@@ -88,6 +88,12 @@ mat-card-title {
   font-style: italic;
 }
 
+tr.mat-mdc-row:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
 .loading-spinner-container {
   display: flex;
   justify-content: center;

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FruitTableViewModel } from './fruit-table-view-model';
 import { FruitSortOption } from "../../enums/fruit-sort-option";
 import {Fruit} from "../../models/fruit";
+import {FruitDialogComponent} from "../fruit-dialog/fruit-dialog.component";
+import {MatDialog} from "@angular/material/dialog";
 
 interface SortOptionDisplay {
   label: string;
@@ -33,6 +35,7 @@ export class FruitTableComponent implements OnInit {
 
   constructor(
       public viewModel: FruitTableViewModel,
+      public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -76,5 +79,17 @@ export class FruitTableComponent implements OnInit {
    */
   isSpecialRow(fruit: Fruit): boolean {
     return fruit.nutritions.calories <= 50 && fruit.nutritions.sugar >= 8;
+  }
+
+  /**
+   * Bonus Task: Opens a dialog modal to display detailed information about a fruit.
+   * This method is called when a table row is clicked.
+   * @param fruit The Fruit object whose details are to be displayed in the dialog.
+   */
+  openFruitDetails(fruit: Fruit): void {
+    this.dialog.open(FruitDialogComponent, {
+      width: '450px', // Set a fixed width for the dialog
+      data: fruit // Pass the entire fruit object to the dialog
+    });
   }
 }
