@@ -24,4 +24,14 @@ export class MessagingViewModel {
     isTextMessage(message: Message): message is TextMessage {
         return message instanceof TextMessage;
     }
+
+    /**
+     * Helper method to check if a message is an ImageMessage.
+     * This logic is now in the ViewModel.
+     * @param message The message object to check.
+     * @returns True if the message is an ImageMessage, false otherwise.
+     */
+    isImageMessage(message: Message): message is ImageMessage {
+        return message instanceof ImageMessage;
+    }
 }
