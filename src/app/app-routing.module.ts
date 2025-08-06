@@ -14,6 +14,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MessagingComponent} from './messaging-challenge/components/messaging/messaging.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
 
 const routes: Routes = [
   {
@@ -45,6 +48,9 @@ const routes: Routes = [
     MatButtonModule,
     RouterModule,
     MatMenuModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
     MatCardModule,
     MatDividerModule
   ],
