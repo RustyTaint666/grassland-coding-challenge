@@ -25,7 +25,6 @@ mat-card-title {
   font-weight: 600;
 }
 
-/* Goal 2: Styling for the filter and sort controls container */
 .controls-container {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +34,6 @@ mat-card-title {
   align-items: center;
 }
 
-/* Goal 2: Styling for the filter input and sort dropdown */
 .filter-input, .sort-select {
   flex: 1;
   min-width: 250px;
@@ -52,6 +50,35 @@ mat-card-title {
 
 .mat-input-element {
   color: #333;
+}
+
+/* Goal 3: Alternating row background colors */
+.alternate-row-even {
+  background-color: #FFFFFF;
+}
+
+.alternate-row-odd {
+  background-color: #FAFAFA;
+}
+
+/* Goal 3: Special row background color */
+.special-row {
+  background-color: #31BF5D !important;
+  color: #fff;
+}
+
+.special-row td.mat-cell {
+  color: #fff;
+}
+
+/* Goal 3: Bold text for calories <= 50 */
+.bold-calories {
+  font-weight: bold;
+}
+
+/* Goal 3: Right-align text in the last column (Sugar) */
+.align-right {
+  text-align: right;
 }
 
 /* Styling for the "No data" row */

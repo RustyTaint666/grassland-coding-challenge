@@ -54,7 +54,10 @@
 
                         <ng-container matColumnDef="calories">
                             <th mat-header-cell *matHeaderCellDef> Calories</th>
-                            <td mat-cell *matCellDef="let fruit"> {{fruit.nutritions.calories}} </td>
+                            <!-- Goal 3: Apply bold-calories class conditionally -->
+                            <td mat-cell *matCellDef="let fruit" [class.bold-calories]="isLowCalorie(fruit.nutritions.calories)">
+                                {{fruit.nutritions.calories}}
+                            </td>
                         </ng-container>
 
                         <!-- Carbohydrates Column -->
@@ -67,16 +70,22 @@
 
                         <!-- Sugar Column -->
                         <ng-container matColumnDef="sugar">
-                            <th mat-header-cell *matHeaderCellDef>Sugar</th>
-                            <td mat-cell *matCellDef="let fruit">
+                            <th mat-header-cell *matHeaderCellDef class="align-right">Sugar</th>
+                            <!-- Goal 3: Right-align text in the last column -->
+                            <td mat-cell *matCellDef="let fruit" class="align-right">
                                 {{ fruit.nutritions.sugar }}
                             </td>
                         </ng-container>
 
                         <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+                        <!-- Goal 3: Apply alternating row colors and special row background conditionally -->
+                        <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay; let i = index;"
+                            [class.alternate-row-even]="i % 2 === 0"
+                            [class.alternate-row-odd]="i % 2 !== 0"
+                            [class.special-row]="isSpecialRow(myRowData)">
+                        </tr>
 
-                        <!-- Added: Row to display when no data matches the filter -->
+                        <!-- Row to display when no data matches the filter or on initial load if no data -->
                         <tr class="mat-row" *matNoDataRow>
                             <td class="mat-cell" [attr.colspan]="columnsToDisplay.length">
                                 No data matching the filter "{{filterText}}"
