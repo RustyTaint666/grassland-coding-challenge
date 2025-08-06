@@ -1,0 +1,46 @@
+.message-container-base {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  gap: 8px;
+  max-width: 80%;
+}
+
+.profile-picture {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-bubble-base {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  max-width: calc(100% - 16px - 8px);
+}
+
+.message-sender-base {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.85em;
+  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.message-container-base.from-anna {
+  margin-left: auto;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.message-container-base.from-other {
+  margin-right: auto;
+  flex-direction: row;
+  text-align: left;
+}

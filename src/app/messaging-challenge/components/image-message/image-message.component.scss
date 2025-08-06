@@ -1,0 +1,27 @@
+@import '../base-message/base-message.component.scss';
+
+.image-message-container {
+  @extend .message-container-base;
+}
+
+.image-message-bubble {
+  @extend .message-bubble-base;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.image-message-container.from-anna .image-message-bubble {
+  background-color: #4267B2;
+}
+
+.image-message-container.from-other .image-message-bubble {
+  background-color: #8D8E91;
+}

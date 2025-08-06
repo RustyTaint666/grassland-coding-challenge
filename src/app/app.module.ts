@@ -19,6 +19,7 @@ import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {TextMessageComponent} from "./messaging-challenge/components/text-message/text-message.component";
+import {ImageMessageComponent} from "./messaging-challenge/components/image-message/image-message.component";
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import {TextMessageComponent} from "./messaging-challenge/components/text-messag
   declarations: [
     AppComponent,
     MessagingComponent,
-    TextMessageComponent
+    TextMessageComponent,
+    ImageMessageComponent
   ],
   providers: [
     {
