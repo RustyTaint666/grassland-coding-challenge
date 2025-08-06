@@ -1,9 +1,15 @@
-import {Component, Input} from '@angular/core';
-import {Message} from '../../models/message';
+import { Component, Input } from '@angular/core';
+import { Message } from '../../models/message';
 
-@Component({ template: '' })
+@Component({
+  selector: 'app-base-message',
+  template: '',
+  styles: []
+})
 export abstract class BaseMessageComponent {
+  @Input() abstract message: Message;
 
-  @Input() message: Message;
-
+  get isFromAnna(): boolean {
+    return this.message.from === 'Anna';
+  }
 }
