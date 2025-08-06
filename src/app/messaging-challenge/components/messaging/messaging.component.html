@@ -2,10 +2,10 @@
     <div class="fake-phone">
         <div class="messaging-container">
             <div class="message-list">
-                <!-- Goal 1: Display messages using ngFor and the json pipe -->
-                <div *ngFor="let message of viewModel.messages$ | async" class="message-item">
-                    <pre>{{ message | json }}</pre>
-                </div>
+                <!-- Goal 3: Display messages using TextMessageComponent -->
+                <ng-container *ngFor="let message of viewModel.messages$ | async">
+                    <app-text-message *ngIf="viewModel.isTextMessage(message)" [message]="message"></app-text-message>
+                </ng-container>
             </div>
         </div>
     </div>
