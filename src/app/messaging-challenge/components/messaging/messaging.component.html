@@ -1,5 +1,12 @@
 <div class="container">
-  <div class="fake-phone">
-    <!-- TODO - your code here -->
-  </div>
+    <div class="fake-phone">
+        <div class="messaging-container">
+            <div class="message-list">
+                <!-- Goal 1: Display messages using ngFor and the json pipe -->
+                <div *ngFor="let message of viewModel.messages$ | async" class="message-item">
+                    <pre>{{ message | json }}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
