@@ -1,0 +1,25 @@
+@import '../base-message/base-message.component.scss';
+
+.text-message-container {
+  @extend .message-container-base;
+}
+
+.text-message-bubble {
+  @extend .message-bubble-base;
+  padding: 4px;
+  font-size: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.text-message-content {
+  color: #fff;
+}
+
+.text-message-container.from-anna .text-message-bubble {
+  background-color: #4267B2;
+}
+
+.text-message-container.from-other .text-message-bubble {
+  background-color: #8D8E91;
+}

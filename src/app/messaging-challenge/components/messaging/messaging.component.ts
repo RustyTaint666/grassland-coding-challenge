@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MessagingViewModel} from "./messaging.view-model";
 
 @Component({
   selector: 'app-messaging',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class MessagingComponent {
 
+  constructor(public viewModel: MessagingViewModel) {}
 }

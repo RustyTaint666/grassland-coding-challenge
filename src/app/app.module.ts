@@ -15,6 +15,11 @@ import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {MessagingComponent} from './messaging-challenge/components/messaging/messaging.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {TextMessageComponent} from "./messaging-challenge/components/text-message/text-message.component";
+import {ImageMessageComponent} from "./messaging-challenge/components/image-message/image-message.component";
 
 @NgModule({
   imports: [
@@ -31,11 +36,16 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     RouterModule,
     MatMenuModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
     MatCardModule
   ],
   declarations: [
     AppComponent,
-    MessagingComponent
+    MessagingComponent,
+    TextMessageComponent,
+    ImageMessageComponent
   ],
   providers: [
     {
